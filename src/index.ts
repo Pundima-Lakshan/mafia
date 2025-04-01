@@ -23,7 +23,7 @@ device.onReady(() => {
     if (process.env.NODE_ENV === 'development') {
         import("@melonjs/debug-plugin").then((debugPlugin) => {
             // automatically register the debug panel
-           plugin.register(debugPlugin.DebugPanelPlugin, "debugPanel");
+            plugin.register(new debugPlugin.DebugPanelPlugin(), "debugPanel");
         });
     }
 
